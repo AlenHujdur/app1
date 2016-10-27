@@ -1,0 +1,49 @@
+<table border="1">
+  <tr>
+    <th>Order id</th>
+    <th>Info</th>
+    <th>Date of order</th>
+    <th>Qunatity</th>
+
+    <th>Title</th>
+    <th>Image_url</th>
+    <th>Product id</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.id %></td>
+    <td><%= order.info %></td>
+    <td><%= order.orderdate %></td>
+    <td><%= order.quantity %></td>
+
+    <td><%= order.product.title %></td>
+    <td><%= order.product.image_url %></td>
+    <td><%= order.product.id %></td>
+    <td><%= order.product.description %></td>
+    <td><%= order.product.price %></td>
+  </tr>
+<% end %>
+</table>     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Product.create(title:'Product1', description:'Free-wordpress-hosting-list',image_url:'https://allbloggingtips.com/wp-content/uploads/2011/12/free-wordpress-hosting-list.png', price:2.00)
+    Product.create(title:'Product2', description:'Mountin',image_url:'http://netdna.webdesignerdepot.com/uploads/2013/11/picjumbo.com_DSC_3274.jpg', price:5.00)
+    Product.create(title:'Product3', description:'Flowers',image_url:'https://static.pexels.com/photos/27714/pexels-photo-27714.jpg', price:15.00)
+
+    Order.create(product_id:1, info:'Information1', quantity:1, orderdate:'20162610' )
+    Order.create(product_id:2, info:'Information2', quantity:2, orderdate:'20162710' )
+    Order.create(product_id:3, info:'Information3', quantity:5, orderdate:'20162810' )

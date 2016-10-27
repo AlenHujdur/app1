@@ -1,0 +1,26 @@
+<p>
+  <strong>Order:</strong>
+  <%= @order.id %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @order.product.title %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @order.product.price %>
+</p>
+
+<p>
+  <strong>Quntity:</strong>
+  <%= @order.quantity %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @sumarno %>
+</p>
+
+ <%= image_tag (@order.product.image_url)%>
+
