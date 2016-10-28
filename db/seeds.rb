@@ -13,6 +13,6 @@ Product.create(title:'Product1', description:'Free-wordpress-hosting-list',image
 Product.create(title:'Product2', description:'Mountin',image_url:'http://netdna.webdesignerdepot.com/uploads/2013/11/picjumbo.com_DSC_3274.jpg', price:5.00)
 Product.create(title:'Product3', description:'Flowers',image_url:'https://static.pexels.com/photos/27714/pexels-photo-27714.jpg', price:15.00)
 
-Order.create(product_id:1, info:'Information1', quantity:1, orderdate:'20162610' )
-Order.create(product_id:2, info:'Information2', quantity:2, orderdate:'20162710' )
-Order.create(product_id:3, info:'Information3', quantity:5, orderdate:'20162810' )
+Order.create(product_id:1, info:'Information1', quantity:1, orderdate:'2016-26-10' )
+Order.create(product_id:2, info:'Information2', quantity:2, orderdate:'2016-27-10' )
+Order.create(product_id:3, info:'Information3', quantity:5, orderdate:'2016-28-10' )
