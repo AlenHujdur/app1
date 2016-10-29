@@ -1,4 +1,7 @@
 class Order < ActiveRecord::Base
+  include ActiveModel::Serialization
+  #include ActiveModel::Serializers::JSON
+  #include ActiveModel::Serializers::Xml
  belongs_to :product
 
  def self.total
