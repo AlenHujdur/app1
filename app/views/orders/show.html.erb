@@ -22,5 +22,6 @@
   <%= @sumarno %>
 </p>
 
- <%= image_tag (@order.product.image_url)%>
-
+ <%= image_tag (@order.product.image_url)%><br/>
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

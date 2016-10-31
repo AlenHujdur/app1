@@ -1,0 +1,21 @@
+<h2>Edit order</h2>
+<%= form_for(@order) do |f| %>
+<p>
+<%=f.label :info %>
+<br>
+<%=f.text_area :info, rows: 5 %>
+</p>
+<p>
+<%=f.label :quantity %>
+<br>
+<%=f.text_field :quantity %>
+</p>
+
+<p>
+<%=f.label :orderdate %>
+<br>
+<%=f.datetime_local_field :orderdate %>
+</p>
+<br>
+<%=f.submit "Save"%>
+<%end%>
