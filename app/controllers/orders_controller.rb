@@ -12,7 +12,8 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order=Order.new  
+    @order=Order.new
+    @product = Product.find(params[:id])
   end
 
   def create
