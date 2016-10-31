@@ -1,0 +1,28 @@
+<h2>New Order</h2>
+<%= form_for(@order) do |f| %>
+<p>
+<%=f.label :info %>
+<br>
+<%=f.text_area :info, rows: 5 %>
+</p>
+<p>
+<%=f.label :quantity %>
+<br>
+<%=f.text_field :quantity %>
+</p>
+<p>
+<%=f.label :product_id %>
+<br>
+<%=f.text_field :product_id %>
+</p>
+<p>
+<%=f.label :orderdate %>
+<br>
+<%=f.datetime_local_field :orderdate %>
+</p>
+<br>
+
+<%=f.submit "Save"%>
+<%end%>
+
+<%= link_to 'Back', orders_path %>
