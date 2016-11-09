@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
 
   def new
     @order=Order.new
-    #@product=Product.new
+    @product=Product.new
   end
 
   def create
@@ -25,8 +25,8 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    @product = Product.find(params[:id])
-    @sumarno = Order.suma(@order,@product)
+    #@product = Product.find(params[:id])
+    #@sumarno = Order.suma(@order,@product)
   end
 
   def edit
