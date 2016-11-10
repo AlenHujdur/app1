@@ -29,6 +29,11 @@ class OrdersController < ApplicationController
     index = @order.product.id
     @sumarno = Order.suma(@order.id,index)
   end
+  def report
+    Number_of_orders= Order.count
+    @nr=Number_of_orders
+    	
+  end
 
   def edit
     @order = Order.find(params[:id])
