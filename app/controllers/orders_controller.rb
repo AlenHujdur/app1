@@ -1,6 +1,9 @@
 class OrdersController < ApplicationController
 
   def index
+    @count=Order.counts
+    @average=Order.averages
+
     @orders = Order.all
     @sum = Order.total
 
@@ -30,9 +33,8 @@ class OrdersController < ApplicationController
     @sumarno = Order.suma(@order.id,index)
   end
   def report
-    Number_of_orders= Order.count
-    @nr=Number_of_orders
-    	
+    @count=Order.calcula.nr
+    @average=Order.calcula.avg
   end
 
   def edit

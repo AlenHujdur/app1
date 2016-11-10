@@ -14,6 +14,16 @@ class Order < ActiveRecord::Base
     return @order.quantity * @product.price
  end
 
+ def self.counts
+   @nr=Order.count(:id)
+   return @nr
+ end
+
+ def self.averages
+   @avg=Order.average(:quantity)
+   return @avg
+ end
+
  def self.to_csv(options = {})
    CSV.generate(options) do |csv|
      csv << column_names

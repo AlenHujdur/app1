@@ -15,4 +15,7 @@
       <%= link_to 'Show', order_path(e) %>
 <% end %>
       <h3>Total quantity:<%= @sum %></h3>
+      <h3>Average quantity:<%= @average %></h3>
+      <h3>Nr of orders:<%= @count %></h3>
+
 <%= link_to 'New Order', new_order_path %>
