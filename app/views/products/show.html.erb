@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%=flash[:message] = "You have already used that letter"%>
 
+<p id="notice"><%= notice %></p>
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
